@@ -22,7 +22,8 @@ int deleteMin()
 	int r = heap[1];	
 	heap[1] = heap[hs--];
 	sink(1);
-return r;
+	
+	return r;
 }
 
 void swim(int p)
@@ -55,14 +56,15 @@ int main(int argc, char *argv[])
 		hs = 0;
 		memset(heap, 0, sizeof(heap));
 		while(n--) {
-		int a;
-		scanf("%d", &a);
-		insert(a);
+			int a;
+			scanf("%d", &a);
+			insert(a);
 		}
 		for(int i = 0; i <= hs; i++)
 			printf("%d ", heap[i]);
 		printf("\n");
 		printf("The Minnum is %d\n", deleteMin());
 	}
-return 0;
+	
+	return 0;
 }
